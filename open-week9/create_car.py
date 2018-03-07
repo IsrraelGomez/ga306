@@ -41,7 +41,7 @@ def create_tire(name, width, radius, tx, ty, tz):
     # Create a cylinder that represents a tire.
     # Return the transform node name.
     tire = cmds.polyCylinder(h=width, r=radius, ax=(0,0,1), sc=True, name=name)
-    spike.addSpikes(tire[0])
+    spike.addSpikes(tires[0])
     cmds.setAttr("{0}.translate".format(tire[0]), tx, ty, tz)
     return tire[0]
     
